@@ -12,14 +12,13 @@ typedef struct {
 
 Point Rotate(Point& p1, float angle, Point& p2) {
 
-	float s = sin(angle);
-	float c = cos(angle);
-
 	p2.x -= p1.x;
 	p2.y -= p1.y;
-
-	float xnew = p2.x * c - p2.y * s;
-	float ynew = p2.x * s + p2.y * c;
+	
+	float sin = sin(angle);
+	float cos = cos(angle);
+	float xnew = p2.x * cos - p2.y * sin;
+	float ynew = p2.x * sin + p2.y * cos;
 
 	p2.x = xnew + p1.x;
 	p2.y = ynew + p1.y;
