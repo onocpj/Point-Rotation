@@ -17,8 +17,8 @@ Point Rotate(Point& p1, float angle, Point& p2) {
 
 	float sinus = sin(angle);
 	float cosinus = cos(angle);
-	float xnew = p2.x * cosinus - p2.y * sinus;
-	float ynew = p2.x * sinus + p2.y * cosinus;
+	float xnew = (p2.x * cosinus) - (p2.y * sinus);
+	float ynew = (p2.x * sinus) + (p2.y * cosinus);
 
 	p2.x = xnew + p1.x;
 	p2.y = ynew + p1.y;
