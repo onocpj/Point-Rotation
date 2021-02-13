@@ -3,7 +3,6 @@
 #include <windows.h>
 #include <iostream>
 
-
 typedef struct {
 
 	float x;
@@ -11,7 +10,7 @@ typedef struct {
 
 } Point;
 
-Point RotatePoint(Point& p1, float angle, Point& p2) {
+Point Rotate(Point& p1, float angle, Point& p2) {
 
 	float s = sin(angle);
 	float c = cos(angle);
@@ -45,10 +44,10 @@ int main(void) {
 		SetPixel(hdc, p2.x, p2.y, RGB(255, 255, 255));
 		SetPixel(hdc, p3.x, p3.y, RGB(255, 255, 255));
 
-		RotatePoint(p1, 0.1f, p2);
-		RotatePoint(p2, 0.1f, p1);
-		RotatePoint(p3, 0.1f, p1);
-		RotatePoint(p3, 0.1f, p2);
+		Rotate(p1, 0.1f, p2);
+		Rotate(p2, 0.1f, p1);
+		Rotate(p3, 0.1f, p1);
+		Rotate(p3, 0.1f, p2);
 
 		if ((rand() % 6) >= 3) {
 			p3.x += (float)(rand() % 6);
