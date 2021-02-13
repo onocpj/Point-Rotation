@@ -14,11 +14,11 @@ Point Rotate(Point& p1, float angle, Point& p2) {
 
 	p2.x -= p1.x;
 	p2.y -= p1.y;
-	
-	float sin = sin(angle);
-	float cos = cos(angle);
-	float xnew = p2.x * cos - p2.y * sin;
-	float ynew = p2.x * sin + p2.y * cos;
+
+	float sinus = sin(angle);
+	float cosinus = cos(angle);
+	float xnew = p2.x * cosinus - p2.y * sinus;
+	float ynew = p2.x * sinus + p2.y * cosinus;
 
 	p2.x = xnew + p1.x;
 	p2.y = ynew + p1.y;
@@ -51,7 +51,8 @@ int main(void) {
 		if ((rand() % 6) >= 3) {
 			p3.x += (float)(rand() % 6);
 			p3.y += (float)(rand() % 6);
-		} else {
+		}
+		else {
 			p3.x -= (float)(rand() % 6);
 			p3.y -= (float)(rand() % 6);
 		}
